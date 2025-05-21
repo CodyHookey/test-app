@@ -8,8 +8,7 @@ class PostsController < ApplicationController
   end
 
   def display_all_posts
-    user = User.find(params[:user_id])
-    posts = user.posts
+    posts = Post.all
 
     render json: posts
   end
